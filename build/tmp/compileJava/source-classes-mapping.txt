@@ -1,0 +1,16 @@
+com/demantic/exercise/entity/Book.java
+ com.demantic.exercise.entity.Book
+com/demantic/exercise/entity/ScienceJournal.java
+ com.demantic.exercise.entity.ScienceJournal
+com/demantic/exercise/repository/BookRepository.java
+ com.demantic.exercise.repository.BookRepository
+com/demantic/exercise/entity/AntiqueBook.java
+ com.demantic.exercise.entity.AntiqueBook
+com/demantic/exercise/LibraryApplication.java
+ com.demantic.exercise.LibraryApplication
+com/demantic/exercise/entity/RegularBook.java
+ com.demantic.exercise.entity.RegularBook
+com/demantic/exercise/service/RegularBookService.java
+ com.demantic.exercise.service.RegularBookService
+com/demantic/exercise/controller/RegularBookController.java
+ com.demantic.exercise.controller.RegularBookController
