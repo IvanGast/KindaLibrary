@@ -1,8 +1,11 @@
 package com.demantic.exercise.entity;
 
+import javax.persistence.Entity;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
 @EqualsAndHashCode(callSuper = true)
 @Data
-public class RegularBook extends Book { }
+@Entity
+public class RegularBook extends Book {
+}

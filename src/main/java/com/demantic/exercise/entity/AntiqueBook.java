@@ -1,16 +1,21 @@
 package com.demantic.exercise.entity;
 
 import java.time.LocalDate;
-import lombok.AllArgsConstructor;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
 
 @EqualsAndHashCode(callSuper = true)
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
+@Entity
+@Table(name = "antique_books")
 public class AntiqueBook extends Book {
+  @Id
+  @GeneratedValue
+  private Long id;
   private int releaseYear;
 
   @Override
