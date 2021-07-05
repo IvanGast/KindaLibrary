@@ -21,7 +21,7 @@ public class AntiqueBookController {
   }
 
   @PostMapping("/" + Consts.ANTIQUE_PATH + "/add")
-  public void addBook(@RequestBody AntiqueBook book) {
+  public void addBook(@RequestBody @Valid AntiqueBook book) {
     antiqueBookService.addBook(book);
   }
 

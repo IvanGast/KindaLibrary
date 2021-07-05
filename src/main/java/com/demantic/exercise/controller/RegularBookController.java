@@ -26,7 +26,7 @@ public class RegularBookController {
   }
 
   @PutMapping("/" + Consts.REGULAR_PATH + "/update")
-  public void updateBook(@RequestBody @Valid RegularBook book) {
+  public void updateBook(@RequestBody RegularBook book) {
     regularBookService.updateBook(book);
   }
 }

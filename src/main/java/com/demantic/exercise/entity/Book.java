@@ -2,12 +2,9 @@ package com.demantic.exercise.entity;
 
 import com.demantic.exercise.dto.SortByQuantityDTO;
 import com.demantic.exercise.util.BookType;
-import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.Inheritance;
 import javax.persistence.MappedSuperclass;
-import javax.persistence.Table;
 import lombok.Data;
 
 @Data

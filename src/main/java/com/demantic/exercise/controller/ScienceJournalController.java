@@ -20,7 +20,7 @@ public class ScienceJournalController {
   }
 
   @PostMapping("/" + Consts.SCIENCE_PATH + "/add")
-  public void addBook(@RequestBody ScienceJournal book) {
+  public void addBook(@RequestBody @Valid ScienceJournal book) {
     scienceJournalService.addBook(book);
   }
 
