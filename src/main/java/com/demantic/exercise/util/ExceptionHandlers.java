@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @ControllerAdvice
 public class ExceptionHandlers {
+
   @Autowired
   private MessageSource messageSource;
 
@@ -34,7 +35,8 @@ public class ExceptionHandlers {
 
   @ExceptionHandler(value = IllegalArgumentException.class)
   @ResponseBody
-  public ServerError handleIllegalArgumentException(HttpServletResponse response, IllegalArgumentException ex) {
+  public ServerError handleIllegalArgumentException(HttpServletResponse response,
+      IllegalArgumentException ex) {
     response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
     String header = ex.getMessage();
     return new ServerError(header, new ArrayList<>());

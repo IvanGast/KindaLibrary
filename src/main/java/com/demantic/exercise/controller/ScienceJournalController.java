@@ -1,12 +1,9 @@
 package com.demantic.exercise.controller;
 
-import com.demantic.exercise.dto.SortByQuantityDTO;
 import com.demantic.exercise.entity.ScienceJournal;
 import com.demantic.exercise.service.ScienceJournalService;
 import com.demantic.exercise.util.Consts;
-import java.util.List;
 import javax.validation.Valid;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -30,10 +27,5 @@ public class ScienceJournalController {
   @PutMapping("/" + Consts.SCIENCE_PATH + "/update")
   public void updateBook(@RequestBody @Valid ScienceJournal book) {
     scienceJournalService.updateBook(book);
-  }
-
-  @GetMapping("/" + Consts.SCIENCE_PATH + "/sort")
-  public List<SortByQuantityDTO> sortByQuantity() {
-    return scienceJournalService.sortByQuantity();
   }
 }

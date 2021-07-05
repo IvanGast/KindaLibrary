@@ -1,6 +1,5 @@
 package com.demantic.exercise.exception;
 
-
 import java.util.List;
 import lombok.AllArgsConstructor;
 import lombok.Getter;

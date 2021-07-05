@@ -1,12 +1,9 @@
 package com.demantic.exercise.controller;
 
-import com.demantic.exercise.dto.SortByQuantityDTO;
 import com.demantic.exercise.entity.AntiqueBook;
 import com.demantic.exercise.service.AntiqueBookService;
 import com.demantic.exercise.util.Consts;
-import java.util.List;
 import javax.validation.Valid;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -16,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping(value = Consts.API_PATH)
 public class AntiqueBookController {
+
   private AntiqueBookService antiqueBookService;
 
   public AntiqueBookController(AntiqueBookService antiqueBookService) {
@@ -30,10 +28,5 @@ public class AntiqueBookController {
   @PutMapping("/" + Consts.ANTIQUE_PATH + "/update")
   public void updateBook(@RequestBody @Valid AntiqueBook book) {
     antiqueBookService.updateBook(book);
-  }
-
-  @GetMapping("/" + Consts.ANTIQUE_PATH + "/sort")
-  public List<SortByQuantityDTO> sortByQuantity() {
-    return antiqueBookService.sortByQuantity();
   }
 }
